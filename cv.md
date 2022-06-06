@@ -31,5 +31,6 @@ function solution(number){
 ## Languages
 * Ukrainian - Native
 * Russian - Native
-* English - C1 Advanced (according to [Efset.org](https://www.efset.org/))
+* English - C1 Advanced (according to [efset.org](https://www.efset.org/))
+
 ![English score](/images/english_level.jpg "C1")
