@@ -1,5 +1,5 @@
 # Kyrylo Petrishchev
-![This is also me](/images/portrait.jpg "This is me")
+![This is also me](images/portrait.jpg "This is me")
 ## Contact information
 * __Phone:__ +3806665296**
 * __Discord:__ @lumpen
@@ -33,4 +33,4 @@ function solution(number){
 * Russian - Native
 * English - C1 Advanced (according to [efset.org](https://www.efset.org/))
 
-![English score](/images/english_level.jpg "C1")
+![English score](images/english_level.jpg "C1")
