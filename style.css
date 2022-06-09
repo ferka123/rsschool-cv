@@ -122,14 +122,18 @@ body {
 
 .title-container {
     display: flex;
-    height: 270px;
+    margin-top: 40px;
 
+}
+
+.leftside {
+    margin-left: 25px;
 }
 
 .title-text {
     writing-mode: vertical-lr;
     text-anchor: middle;
-    text-align: center;
+    text-align: end;
     transform: rotate(180deg);
     font-family: 'DMSans';
     font-size: 20px;
@@ -142,16 +146,20 @@ body {
 }
 
 .profile-name {
-    text-align: left;
-    margin: auto;
-    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    margin: 0;
 
     font-family: opensauce;
-    line-height: 1.2;
+
     font-size: 100px;
     color: #ffffff;
-    margin-right: 15px;
     z-index: 1;
+}
+
+.profile-name>span {
+    padding-bottom: 25px;
 }
 
 .profile-picture {
@@ -167,31 +175,30 @@ body {
     }
 
     .profile-picture {
-        width: 65vw;
+        width: 80vw;
         height: auto;
         margin: auto;
     }
 
-    .leftside {
-        margin: auto;
-    }
-}
 
-@media (max-width: 700px) {
     .profile-name {
-
-        font-size: 78px;
-
+        font-size: 13.5vw;
     }
 
     .title-text {
-        font-size: 17px;
-        letter-spacing: 2px;
+        font-size: 2.9vw;
+        letter-spacing: 2.4px;
     }
 
+}
+
+@media (max-width: 768px) {
+
+
+
+
     .title-container {
-        display: flex;
-        height: 255px;
+        margin-top: 55px;
 
     }
 
