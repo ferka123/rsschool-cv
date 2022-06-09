@@ -190,17 +190,38 @@ body {
     width: 50%;
 }
 
-.about {
+.about, .contacts {
     width: 1000px; 
 }
 
 
 
-.section > p {
+.section > p, ul {
     font-family: 'DMSans';
     font-size: 20px;
-
     color: #ffffff;    
+}
+
+.section-list {
+    padding-left: 20px;
+   /* list-style-type: none; */
+}
+
+.section-list > li {
+   padding: 5px;
+   /* list-style-type: none; */
+}
+
+.section > pre {
+    font-family: 'DMSans';
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #ffffff;    
+}
+
+.languages img {
+    display: flex;
+    width: 50%;
 }
 
 .section-title {
@@ -294,6 +315,6 @@ body {
 
     .title-text {
         font-size: 3vw;
-        letter-spacing: 3px;
+        letter-spacing: 2.4px;
     }
 }
