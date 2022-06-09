@@ -54,6 +54,7 @@ body {
     width: 26px;
     height: 26px;
     cursor: pointer;
+    user-select: none;
 }
 
 .burger-btn>span,
@@ -93,9 +94,9 @@ body {
     transform: rotate(90deg);
 }
 
-#burger-toggle:checked ~ .menu-list {
+#burger-toggle:checked~.menu-list {
     visibility: visible;
-  }
+}
 
 
 .menu-list {
@@ -206,7 +207,7 @@ body {
         background-color: #545252;
         border-radius: 3px;
         opacity: 99%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);  
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
         list-style: none;
         text-align: center;
         z-index: 2;
@@ -216,6 +217,7 @@ body {
         display: flex;
         z-index: 3;
     }
+
     .menu-item {
         padding: 15px;
     }
