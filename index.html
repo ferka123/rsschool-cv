@@ -6,7 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/androidstudio.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -62,13 +66,13 @@
       </section>
       <section class="section code" id="code">
         <h2 class="section-title">Code Example</h2>
-        <pre>function solution(number) {
+        <pre><code class="language-javascript">function solution(number) {
     let sum = 0;
     for (let i = number-1; i > 0; i--) {
         if ((i % 3 == 0) || (i % 5 == 0)) sum += i;
     }
     return sum;
-}          </pre>
+}          </code></pre>
       </section>
       <section class="section projects" id="projects">
         <h2 class="section-title">Projects</h2>        
@@ -77,7 +81,7 @@
           <span>
             <b>CV - CSS/HTML Project</b><br>
             This is my first project. The task was to create CV using markdown and then lay it out using html and css.<br>
-            <a href="https://github.com/ferka123/rsschool-cv">> Github</a>
+            <a href="https://github.com/ferka123/rsschool-cv" target="_blank">> Github</a>
           </span>
         </div>
       </section>
@@ -96,16 +100,16 @@
         <h2 class="section-title">Contacts</h2>
         <ul class="contacts-list">
           <li class="contacts-email">
-            <a href="mailto:ferka911@gmail.com">ferka911@gmail.com</a>
+            <a href="mailto:ferka911@gmail.com" target="_blank">ferka911@gmail.com</a>
           </li>
           <li class="contacts-discord">
-            <a href="https://discordapp.com/users/lumpen#8980/">lumpen#8980</a>
+            <a href="https://discordapp.com/users/lumpen#8980/" target="_blank">lumpen#8980</a>
           </li>
           <li class="contacts-telegram">
-            <a href="https://t.me/ferka911">ferka911</a>
+            <a href="https://t.me/ferka911" target="_blank">ferka911</a>
           </li>
           <li class="contacts-github">
-            <a href="https://github.com/ferka123/">ferka123</a>
+            <a href="https://github.com/ferka123/" target="_blank">ferka123</a>
           </li>
           <li class="contacts-location">
             Kropivnitsky, Ukraine
