@@ -55,7 +55,7 @@ body {
     align-items: center;
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -101,6 +101,7 @@ body {
 
 #burger-toggle:checked~.menu-list {
     visibility: visible;
+    right: 0;
 }
 
 
@@ -115,14 +116,14 @@ body {
     text-align: center;
     text-decoration: none;
     font-family: 'DMSans';
-    font-size: 18px;
+    font-size: 17px;
     text-transform: uppercase;
     color: #e08805;
-    padding: 10px;
+    padding: 8px;
 }
 
 .menu-link:hover {
-    background-color: #111111;
+    background-color: #242424;
 }
 
 .title-container {
@@ -139,14 +140,14 @@ body {
 .title-text {
     writing-mode: vertical-lr;
     text-anchor: middle;
-    text-align:end;
+    text-align: end;
     transform: rotate(180deg);
     font-family: 'DMSans';
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 4.5px;
     color: #e08805;
-    
+
     margin: 0px;
     width: 26px;
 
@@ -184,51 +185,152 @@ body {
     margin-top: 30px;
 }
 
+
+
 .section {
     display: flex;
     flex-direction: column;
     width: 50%;
-}
-
-.about, .contacts {
-    width: 1000px; 
-}
-
-
-
-.section > p, ul {
     font-family: 'DMSans';
     font-size: 20px;
-    color: #ffffff;    
-}
-
-.section-list {
-    padding-left: 20px;
-   /* list-style-type: none; */
-}
-
-.section-list > li {
-   padding: 5px;
-   /* list-style-type: none; */
-}
-
-.section > pre {
-    font-family: 'DMSans';
-    font-size: 15px;
-    letter-spacing: 1px;
-    color: #ffffff;    
-}
-
-.languages img {
-    display: flex;
-    width: 50%;
+    color: #ffffff;
 }
 
 .section-title {
     font-family: 'DMSans-Bold';
     font-size: 24px;
     letter-spacing: 2px;
-    color: #ff9628;  
+    color: #ff9628;
+}
+
+.about,
+.contacts {
+    width: 1000px;
+}
+
+.section-list {
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+.section-list>li {
+    padding: 5px;
+}
+
+.section-list>li::before {
+    content: "> ";
+    color: #ff9628;
+    font-family: 'DMSans-Bold';
+    font-size: 20px;
+}
+
+.projects>div,
+.languages>div {
+    display: flex;
+    width: 100%;
+}
+
+
+.projects img {
+    width: 30%;
+    height: min-content;
+    padding-top: 5px;
+}
+
+.projects span {
+    padding: 5px 20px;
+}
+
+.projects span>a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.projects>div {
+    margin-top: 20px;
+}
+
+.code>pre {
+
+    background: linear-gradient(#262626, #292929);
+    border-radius: 4px;
+    border-left: 3px solid #ff9628;
+    page-break-inside: avoid;
+    font-size: 15px;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 10px;
+    margin-top: 25px;
+    margin-right: 20px;
+    word-wrap: break-word;
+
+}
+
+.languages img {
+    width: 150px;
+    height: 150px;
+}
+
+.contacts-list {
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.contacts-list > li {
+    padding: 0 20px 10px 35px;
+}
+
+.contacts-list > li::before {
+    content: "";
+    position: absolute;
+    margin-left: -35px;
+    width: 30px;
+    height: 30px; 
+    background-size: contain;
+}
+
+.contacts-email::before {
+    background-image: url("assets/svg/email.svg");  
+}
+
+.contacts-discord::before {
+    background-image: url("assets/svg/discord.svg");  
+}
+
+.contacts-telegram::before {
+    background-image: url("assets/svg/telegram.svg");  
+}
+
+.contacts-github::before {
+    background-image: url("assets/svg/git.svg");  
+}
+
+.contacts-location::before {
+    background-image: url("assets/svg/loc.svg");  
+}
+
+.contacts-list > li > a {
+    color: white;
+    text-decoration: none;  
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    border-top: 3px solid #ff9628;
+    margin: 40px 0 0 70px;
+    width: 930px;
+    height: 80px;
+    color: #ffffff;
+    font-family: 'DMSans';
+    font-size: 18px;
 }
 
 @media (max-width: 1000px) {
@@ -253,19 +355,26 @@ body {
         font-size: 3vw;
         letter-spacing: 3px;
     }
+
     .main-container {
         margin-left: 5vw;
         align-self: center;
         padding-left: 0;
         width: 90vw;
     }
-    .section {
-        width: 100%;
-        
+
+    footer {
+        margin-left: 5vw;
+        width: 90vw;
     }
 }
 
 @media (max-width: 768px) {
+    .section {
+        width: 100%;
+
+    }
+
     .title-container {
         margin-top: 55px;
 
@@ -276,17 +385,26 @@ body {
         visibility: hidden;
         position: fixed;
         top: 0;
-        left: 0;
+        right: -100%;
         margin: 0;
-        padding: 50px;
+        padding: 50px 0;
         width: 300px;
-        background-color: #545252;
-        border-radius: 3px;
+        background: linear-gradient(90deg, #232323, #292929);
+        border-radius: 5px;
         opacity: 99%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+        /* box-shadow: 5px rgba(0, 0, 0, .2); */
         list-style: none;
         text-align: center;
         z-index: 2;
+        transition-duration: .15s;
+    }
+
+    .menu-link {
+        padding: 20px 30px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        width: 300px;
+
     }
 
     .burger-btn {
@@ -297,7 +415,7 @@ body {
     .header-menu {
         position: fixed;
         left: 0;
-        width:100%;
+        width: 100%;
         height: 55px;
         background-color: #292929;
         z-index: 2;
@@ -316,5 +434,8 @@ body {
     .title-text {
         font-size: 3vw;
         letter-spacing: 2.4px;
+    }
+    .contacts-list {
+        flex-direction: column; 
     }
 }
