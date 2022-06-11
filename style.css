@@ -80,6 +80,7 @@ body {
     cursor: pointer;
     user-select: none;
 }
+
 .header-menu {
     display: flex;
 }
@@ -89,16 +90,16 @@ body {
     margin-top: 10px;
     width: 30px;
     height: 30px;
-   position: relative; 
-    left:-15px;
+    position: relative;
+    left: -15px;
     cursor: pointer;
     user-select: none;
     background-size: contain;
-    background-image: url("assets/svg/moon.svg"); 
+    background-image: url("assets/svg/moon.svg");
 }
 
 .light-theme #themeBtn {
-    background-image: url("assets/svg/sun.svg"); 
+    background-image: url("assets/svg/sun.svg");
 }
 
 .burger-btn>span,
@@ -164,9 +165,9 @@ body {
 
 .menu-link::after {
     content: "";
-    position: absolute; 
-    right: 10px; 
-    bottom: 0px;  
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
     /* width: calc(100% - 20px); */
     width: 0;
     height: 3px;
@@ -332,24 +333,24 @@ body {
 
 .contacts-list {
     display: flex;
-    justify-content:flex-start;
+    justify-content: first flex-start;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    font-size: 17.4px;
+    font-size: 20px;
 }
 
-.contacts-list > li {
-    padding: 0 20px 25px 10px;
+.contacts-list>li {
+    padding: 0 35px 25px 10px;
 }
 
-.contacts-list > li::before {
+.contacts-list>li::before {
     content: "";
     display: inline-block;
     position: relative;
     top: 7px;
     width: 32px;
-    height: 30px; 
+    height: 30px;
     background-size: contain;
 }
 
@@ -362,31 +363,25 @@ body {
 .contacts-discord::before {
     background-color: var(--titletext);
     -webkit-mask-image: url(assets/svg/discord.svg);
-    mask-image: url(assets/svg/discord.svg);  
+    mask-image: url(assets/svg/discord.svg);
 }
 
 .contacts-telegram::before {
     background-color: var(--titletext);
     -webkit-mask-image: url(assets/svg/telegram.svg);
-    mask-image: url(assets/svg/telegram.svg); 
-}
-
-.contacts-github::before {
-    background-color: var(--titletext);
-    -webkit-mask-image: url(assets/svg/git.svg);
-    mask-image: url(assets/svg/git.svg);  
+    mask-image: url(assets/svg/telegram.svg);
 }
 
 .contacts-location::before {
     background-color: var(--titletext);
     -webkit-mask-image: url(assets/svg/loc.svg);
-    mask-image: url(assets/svg/loc.svg); 
+    mask-image: url(assets/svg/loc.svg);
 }
 
-.contacts-list > li > a {
+.contacts-list>li>a {
     color: var(--textcolor);
     text-decoration: none;
-    padding-left: 5px; 
+    padding-left: 5px;
 }
 
 footer {
@@ -395,7 +390,7 @@ footer {
     align-self: center;
     align-items: center;
     border-top: 3px solid var(--titletext);
-    margin: 40px 0 0 70px;
+    margin: 20px 0 0 70px;
     width: 930px;
     height: 80px;
     color: var(--textcolor);
@@ -403,12 +398,38 @@ footer {
     font-size: 18px;
 }
 
+.footer-github {
+    color: var(--textcolor);
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+.footer-github::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    left: -10px;
+    width: 32px;
+    height: 30px;
+    background-size: contain;
+    background-color: var(--textcolor);
+    -webkit-mask-image: url(assets/svg/git.svg);
+    mask-image: url(assets/svg/git.svg);
+}
+
 .rsschool-logo {
     width: 80px;
     height: 29px;
     background-color: var(--textcolor);
     -webkit-mask-image: url(assets/svg/rsschool.svg);
-    mask-image: url(assets/svg/rsschool.svg);     
+    mask-image: url(assets/svg/rsschool.svg);
+}
+
+footer>span {
+    font-size: 15px;
+    padding-top: 10px;
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -448,6 +469,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 40px;
+    }
+
     .section {
         width: 100%;
 
@@ -501,8 +526,8 @@ footer {
     }
 
     #themeBtn {
-    margin-left: 25px;
-    left: 0px;
+        margin-left: 25px;
+        left: 0px;
     }
 
     .menu-item {
@@ -519,8 +544,9 @@ footer {
         font-size: 3vw;
         letter-spacing: 2.4px;
     }
+
     .contacts-list {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .code>pre>code {
