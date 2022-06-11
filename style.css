@@ -73,7 +73,7 @@ body {
     display: none;
     align-items: center;
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 20px;
     width: 26px;
     height: 26px;
@@ -270,17 +270,18 @@ body {
 }
 
 .projects>div {
+    flex-direction: column;
     margin: 20px 0 20px 0;
 }
 
 .projects img {
-    width: 60%;
-    height: 60%;
+    width: 100%;
     padding-top: 5px;
 }
 
 .projects span {
-    padding: 5px 20px;
+    padding: 0px 20px;
+    font-size: 15px;
 }
 
 .projects span>a {
@@ -296,7 +297,7 @@ body {
     border-left: 3px solid var(--titletext);
     page-break-inside: avoid;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 2.3;
     max-width: 100%;
     overflow: hidden;
     padding: 10px 10px;
@@ -481,9 +482,6 @@ footer {
     }
     .contacts-list {
         flex-direction: column; 
-    }
-    .projects span {
-       font-size: 15px;
     }
 
     .code>pre>code {
