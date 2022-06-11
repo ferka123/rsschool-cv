@@ -152,6 +152,7 @@ body {
 }
 
 .menu-link {
+    position: relative;
     text-align: center;
     text-decoration: none;
     font-family: 'DMSans';
@@ -161,8 +162,24 @@ body {
     padding: 8px;
 }
 
-.menu-link:hover {
-    background-color: #242424;
+.menu-link::after {
+    content: "";
+    position: absolute; 
+    right: 10px; 
+    bottom: 0px;  
+    /* width: calc(100% - 20px); */
+    width: 0;
+    height: 3px;
+    background-color: var(--headertext);
+    opacity: 0;
+    transition: width 0.4s ease-in-out, opacity ease-out 0.6s;
+}
+
+.menu-link:hover::after {
+    opacity: 1;
+    width: calc(100% - 20px);
+    left: 10px;
+    transition: width 0.4s ease-in-out;
 }
 
 .title-container {
@@ -276,17 +293,18 @@ body {
 
 .projects img {
     width: 100%;
-    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 4px;
 }
 
 .projects span {
-    padding: 0px 20px;
+    padding: 5px 10px;
     font-size: 15px;
 }
 
 .projects span>a {
     text-decoration: none;
-    color: var(--textcolor);
+    color: var(--titletext);
     font-weight: 700;
 }
 
@@ -297,7 +315,7 @@ body {
     border-left: 3px solid var(--titletext);
     page-break-inside: avoid;
     font-size: 14px;
-    line-height: 2.3;
+    line-height: 2.2;
     max-width: 100%;
     overflow: hidden;
     padding: 10px 10px;
@@ -318,44 +336,57 @@ body {
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
+    font-size: 17.4px;
 }
 
 .contacts-list > li {
-    padding: 0 20px 10px 35px;
+    padding: 0 20px 25px 10px;
 }
 
 .contacts-list > li::before {
     content: "";
-    position: absolute;
-    margin-left: -35px;
-    width: 30px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    width: 32px;
     height: 30px; 
     background-size: contain;
 }
 
 .contacts-email::before {
-    background-image: url("assets/svg/email.svg");  
+    background-color: var(--titletext);
+    -webkit-mask-image: url(assets/svg/email.svg);
+    mask-image: url(assets/svg/email.svg);
 }
 
 .contacts-discord::before {
-    background-image: url("assets/svg/discord.svg");  
+    background-color: var(--titletext);
+    -webkit-mask-image: url(assets/svg/discord.svg);
+    mask-image: url(assets/svg/discord.svg);  
 }
 
 .contacts-telegram::before {
-    background-image: url("assets/svg/telegram.svg");  
+    background-color: var(--titletext);
+    -webkit-mask-image: url(assets/svg/telegram.svg);
+    mask-image: url(assets/svg/telegram.svg); 
 }
 
 .contacts-github::before {
-    background-image: url("assets/svg/git.svg");  
+    background-color: var(--titletext);
+    -webkit-mask-image: url(assets/svg/git.svg);
+    mask-image: url(assets/svg/git.svg);  
 }
 
 .contacts-location::before {
-    background-image: url("assets/svg/loc.svg");  
+    background-color: var(--titletext);
+    -webkit-mask-image: url(assets/svg/loc.svg);
+    mask-image: url(assets/svg/loc.svg); 
 }
 
 .contacts-list > li > a {
     color: var(--textcolor);
-    text-decoration: none;  
+    text-decoration: none;
+    padding-left: 5px; 
 }
 
 footer {
@@ -370,6 +401,14 @@ footer {
     color: var(--textcolor);
     font-family: 'DMSans';
     font-size: 18px;
+}
+
+.rsschool-logo {
+    width: 80px;
+    height: 29px;
+    background-color: var(--textcolor);
+    -webkit-mask-image: url(assets/svg/rsschool.svg);
+    mask-image: url(assets/svg/rsschool.svg);     
 }
 
 @media (max-width: 1000px) {
