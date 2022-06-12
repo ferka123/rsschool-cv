@@ -1,0 +1,58 @@
+.light-theme .hljs {
+    color: #000
+}
+
+.light-theme .hljs-comment,
+.light-theme .hljs-quote,
+.light-theme .hljs-variable {
+    color: green
+}
+
+.light-theme .hljs-built_in,
+.light-theme .hljs-keyword,
+.light-theme .hljs-name,
+.light-theme .hljs-selector-tag,
+.light-theme .hljs-tag {
+    color: #00f
+}
+
+.light-theme .hljs-addition,
+.light-theme .hljs-attribute,
+.light-theme .hljs-literal,
+.light-theme .hljs-section,
+.light-theme .hljs-string,
+.light-theme .hljs-template-tag,
+.light-theme .hljs-template-variable,
+.light-theme .hljs-title,
+.light-theme .hljs-type {
+    color: #a31515
+}
+
+.light-theme .hljs-deletion,
+.light-theme .hljs-meta,
+.light-theme .hljs-selector-attr,
+.light-theme .hljs-selector-pseudo {
+    color: #2b91af
+}
+
+.light-theme .hljs-doctag {
+    color: grey
+}
+
+.light-theme .hljs-attr {
+    color: red
+}
+
+.light-theme .hljs-bullet,
+.light-theme .hljs-link,
+.light-theme .hljs-symbol {
+    color: #00b0e8
+}
+
+.light-theme .hljs-emphasis {
+    font-style: italic
+}
+
+.light-theme .hljs-strong {
+    font-weight: 700
+}
