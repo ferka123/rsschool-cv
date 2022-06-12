@@ -1,13 +1,3 @@
-.light-theme pre code.hljs {
-    display: block;
-    overflow-x: hidden;
-    padding: 1em
-}
-
-.light-theme code.hljs {
-    padding: 3px 5px
-}
-
 .light-theme .hljs {
     color: #000
 }
