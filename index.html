@@ -5,11 +5,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV</title>
+  <title>Kyrylo Petrishchev - Front-end developer</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/androidstudio.min.css">
+  <link rel="stylesheet" href="assets/css/vs.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  Whatever
+<body id="body">
+  <header class="header">
+    <div class="container header-container">
+      <div class="leftside">
+        <nav class="header-menu">
+          <div id="themeBtn"></div>
+          <input id="burger-toggle" type="checkbox" />
+          <label class="burger-btn" for="burger-toggle">
+            <span></span>
+          </label>
+          <ul class="menu-list">
+            <li class="menu-item"><a href="#about" class="menu-link">About</a></li>
+            <li class="menu-item"><a href="#skills" class="menu-link">Skills</a></li>
+            <li class="menu-item"><a href="#code" class="menu-link">Code</a></li>
+            <li class="menu-item"><a href="#projects" class="menu-link">Projects</a></li>
+            <li class="menu-item"><a href="#education" class="menu-link">Education</a></li>
+            <li class="menu-item"><a href="#languages" class="menu-link">Languages</a></li>
+            <li class="menu-item"><a href="#contacts" class="menu-link">Contacts</a></li>
+
+          </ul>
+        </nav>
+        <div class="container title-container">
+          <p class="title-text">Web Developer</p>
+          <h1 class="profile-name"><span>Kyrylo</span><span>Petrishchev</span></h1>
+        </div>
+      </div>
+      <img src="assets/img/profilepic.jpg" alt="profile pic" class="profile-picture">
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main-container">
+      <section class="section about" id="about">
+        <h2 class="section-title">About</h2>
+        <p>Hi! My name is Kirill, and I decided to change my occupation and become a front-end developer. Although I've
+          studied Computer science, I haven't had enough hands-on practice in programming. I am certain that joining RS
+          school will help me with this new endeavor in my life.</p>
+      </section>
+      <section class="section skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul class="section-list">
+          <li>HTML/CSS basics</li>
+          <li>PHP basics</li>
+          <li>Adobe Photoshop/inDesign/After Effects</li>
+        </ul>
+      </section>
+      <section class="section education" id="education">
+        <h2 class="section-title">Education</h2>
+        <ul class="section-list">
+          <li>2013 | East Ukrainian university <br><b>Master of Computer Science</b></li>
+          <li>2022 | Rolling Scopes school <br><b>Front-end developer</b></li>
+        </ul>
+      </section>
+      <section class="section code" id="code">
+        <h2 class="section-title">Code Example</h2>
+        <pre><code class="language-javascript">function solution(number) {
+  let sum = 0;
+  for (let i = 1; i &lt; number; i++) {
+    if ((i % 3 == 0) || (i % 5 == 0)) sum += i;
+  }
+  return sum;
+}</code></pre>
+      </section>
+      <section class="section projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div>
+          <img src="assets/img/cvproject.png" alt="CV Project screenshot">
+          <span>
+            <b>CV - CSS/HTML Project</b><br>
+            This is my first project. The task was to create CV using markdown and then lay it out using html and
+            css.<br>
+            <a href="https://github.com/ferka123/rsschool-cv" target="_blank">> Github</a>
+          </span>
+        </div>
+      </section>
+      <section class="section languages" id="languages">
+        <h2 class="section-title">Languages</h2>
+        <div>
+          <ul class="section-list">
+            <li>Ukranian - native</li>
+            <li>Russian - native</li>
+            <li>English - C2</li>
+          </ul>
+          <a href="https://www.efset.org/cert/s9UBeK" target="_blank"><img src="assets/img/certificate_84.png"
+              alt="efset 84%"></a>
+        </div>
+      </section>
+      <section class="section contacts" id="contacts">
+        <h2 class="section-title">Contacts</h2>
+        <ul class="contacts-list">
+          <li class="contacts-email">
+            <a href="mailto:ferka911@gmail.com" target="_blank">ferka911@gmail.com</a>
+          </li>
+          <li class="contacts-discord">
+            <a href="https://discordapp.com/users/lumpen#8980/" target="_blank">lumpen#8980</a>
+          </li>
+          <li class="contacts-telegram">
+            <a href="https://t.me/ferka911" target="_blank">ferka911</a>
+          </li>
+          <li class="contacts-location">
+            Kropivnitsky, Ukraine
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <a href="https://github.com/ferka123/" target="_blank" class="footer-github">Github</a>
+    <span>© Petrishchev <br>2022</span>
+    <a href="https://rs.school/js/" target="_blank" class="rsschool-logo">
+    </a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
